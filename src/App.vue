@@ -22,7 +22,7 @@ export default {
       films: [],
       tvSeries: [],
       apiKey: "9559f92c2bc23ecddf654092232b0eb1"
-      
+
     };
   },
 
@@ -31,13 +31,13 @@ export default {
       let reqMovie =
       "https://api.themoviedb.org/3/search/movie?api_key=" +
       this.apiKey +
-      "e&language=en-US&query=" +
+      "&language=en-US&query=" +
       userInput;
 
       let reqTv =
       "https://api.themoviedb.org/3/search/tv?api_key=" +
       this.apiKey +
-      "e&language=en-US&query=" +
+      "&language=en-US&query=" +
       userInput;
 
       const reqOne = axios.get(reqMovie);
