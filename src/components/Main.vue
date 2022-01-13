@@ -17,10 +17,13 @@ export default {
   components: {
     MovieSpecs,
     // TvSpecs,
+
   },
+  
   props: {
     films: Array,
     tvSeries: Array,
+
   },
   mounted() {},
   methods: {},

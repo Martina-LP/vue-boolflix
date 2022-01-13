@@ -1,7 +1,8 @@
 <template>
   <div class="row justify-content-center py-5">
     <div class="col" v-for="film in films" :key="film.id">
-      <div class="card bg-dark mt-4">
+      <h3 class="text-primary fs-3 mt-4">Movie</h3>
+      <div class="card bg-dark mt-2">
         <div class="testo text-primary">
           <h4 class="text-center">{{ film.title }}</h4>
           <div class="title">
@@ -63,7 +64,8 @@
     </div>
     <hr class="text-light" />
     <div class="col" v-for="tvShow in tvSeries" :key="tvShow.id">
-      <div class="card bg-dark mt-4">
+      <h3 class="text-primary fs-3 mt-4">Tv Show</h3>
+      <div class="card bg-dark mt-2">
         <div class="testo text-primary">
           <h4 class="text-center">{{ tvShow.name }}</h4>
           <div class="title">
@@ -131,7 +133,8 @@ export default {
 
   props: {
     films: Array,
-  
+    tvSeries: Array,
+
   },
 };
 </script>

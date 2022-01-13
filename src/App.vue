@@ -15,13 +15,14 @@ export default {
   components: {
     Header,
     Main,
+    
   },
 
   data() {
     return {
+      apiKey: "9559f92c2bc23ecddf654092232b0eb1",
       films: [],
-      tvSeries: [],
-      apiKey: "9559f92c2bc23ecddf654092232b0eb1"
+      tvSeries: []
 
     };
   },
