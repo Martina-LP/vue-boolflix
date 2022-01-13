@@ -73,8 +73,17 @@
             <span>Titolo originale: {{ tvShow.original_name }}</span>
           </div>
           <div class="language">
-            <span>Lingua: {{ tvShow.original_language }}
-              <flag :iso="tvShow.original_language" />
+            <span>Lingua: 
+              <!-- If the flag is available -->
+              <span v-if="flagIcons.includes(tvShow.original_language)">
+                <img class="flag" :src="require(`../assets/img/${tvShow.original_language}.png`)" alt="Flag">
+              </span>
+              <!-- <flag :iso="'gb'" v-if="tvShow.original_language == 'en'" /> -->
+              <!-- If the flag is not available -->
+              <span v-else>
+                {{ tvShow.original_language }}
+              </span>
+              <!-- <flag :iso="tvShow.original_language" v-else /> -->
             </span>
           </div>
           <div class="voto">
